@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CONTRATACIONES PÚBLICAS POR EMERGENCIA</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./js/palette.js"></script>
+  </head>
+  <body>
+    <div class="container-scroller">
+			
+		<!-- partial:partials/_horizontal-navbar.html -->
+    
+    <!-- partial -->
+		<div class="container-fluid page-body-wrapper">
+			<div class="main-panel">
+				<div class="content-wrapper">
+					<div class="row">
+						<div class="col-sm-12 mb-4 mb-xl-0">
+							<div class="d-lg-flex align-items-center">
+								<div>
+									<h2 class="text-dark font-weight-bold mb-2 text-uppercase">CIFRAS DE LAS CONTRATACIONES PÚBLICAS POR EMERGENCIA EN ECUADOR</h2>
+									<h6 class="font-weight-normal mb-2">UOC - A9 - Ponce Miguel</h6>
+								</div>								
+							</div>
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-md-8 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Resumen:</h4>
+									<p class="card-description text-justify">
+										Los datos utilizados se han recolectado a través de la nueva plataforma de datos abiertos, la cual proporciona información de las contrataciones públicas por emergencia (SERCOP- actualizada 29/12/2021). <u><b>Se propone realizar una visualización relacionada con el ámbito de contratación pública a nivel nacional durante los primeros meses de pandemia para ciertos insumos en medicina (MASCARILLAS, BOLSAS CADÁVERES, REACTIVOS COVID, PRUEBAS PCR, SERVICIO LABORATORIO).</b></u>  Existen visualizaciones en el portal del SERCOP, que muestran una representación de totales respecto de contratos, pero no hacen énfasis en análisis de comportamientos fraudulentos. Esta solución se encuentra enfocada en realizar una representación que, mediante el uso de técnicas y herramientas de visualización de datos, crear una visualización que sea accesible para todo público; integre la información de los datos para combatir la corrupción y que permita la interacción y retro alimentación de la comunidad. 
+									</p>								
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 mb-3 mb-lg-0">
+							<div class="card congratulation-bg text-center">
+								
+								<div class="card-body pb-0">
+									
+									<h2 class="text-danger mb-0 font-weight-bold">CASOS CORRUPCIÓN 2020
+									</h2>		
+									<img src="images/dashboard/corruption.png" alt="">  							
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-lg-12 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="d-flex align-items-center justify-content-between">
+												<h4 class="text-dark font-weight-bold"><b>Evolución histórica por montos</b></h4>
+												<i class="mdi mdi-currency-usd mdi-18px text-dark"></i>
+											</div>
+
+											<canvas id="line-chart-montos-contratos"></canvas>
+											
+											<p class="mt-3 mb-4 mb-lg-0 text-justify">En el año 2020, debido a la emergencia sanitaria, las compras públicas se multiplicaron. Hospitales, municipios, prefecturas, empresas, agencias, fundaciones, ministerios expresaron la necesidad de adquirir elementos que les permitan defender a la población del coronavirus. A continuación, se muestra la evolución histórica en montos y contratos por mes; para los meses de marzo y abril no se presenta información, 
+											</p>
+											
+										</div>	
+										<div class="col-lg-6">
+											
+											<div class="d-flex align-items-center justify-content-between">
+												<h4 class="text-dark font-weight-bold"><b>Evolución histórica por contratos</b></h4>
+												<i class="mdi mdi-numeric-4-box-multiple-outline mdi-18px text-dark"></i>
+											</div>
+											<canvas id="line-chart-nro-contratos"></canvas>
+											
+											<p class="mt-3 mb-4 mb-lg-0 text-justify">pero se destaca que en los montos mayores fue de $147786 en mayo y $308565 en septiembre; sin embargo, para los meses de febrero, mayo y julio se registran apenas 7 contratos con un monto total de $378988 que representa 33,33% de todos los contratos y en estos meses es donde más exámenes especiales se ha realizado por parte de la Contraloría General del Estado.
+											</p>
+											
+										</div>										
+									</div>
+								</div>
+							</div>
+						</div>						
+						
+					</div>
+					<div class="row mt-4">
+						<div class="col-lg-12 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="d-flex align-items-center justify-content-between">
+												<h4 class="text-dark font-weight-bold"><b>Evolución histórica por productos</b></h4>
+												<i class="mdi mdi-cart-outline	mdi-18px text-dark"></i>
+											</div>
+											<canvas id="bar-chart-productos-meses" width="150" height="50"></canvas>
+											<p class="mt-3 mb-4 mb-lg-0 text-justify">Esta sección muestra un listado de los 6 artículos adquiridos para hacer frente a la emergencia de las entidades públicas. La información se encuentra representada de manera evolutiva durante el periodo 2020. La nueva plataforma de datos abiertos (open data) no brinda una descripción específica sobre la cantidad de productos por contrato que fueron adquiridos, detalle especifico o codificación de productos para realizar una mejor trazabilidad de las misma; luego, fue necesario realizar tratamiento basados en procesamiento del lenguaje natural(NLP), para identificar las categorías a las que pertenece cada producto descrito en los diferentes contratos. Adicionalmente se realizó cruces e integración de información con reportes emitidos en el portal del Sistema Oficial de Contratación Pública(SOCE), en el cual se detalla la información antes mencionada, en donde mediante limpieza de datos e identificación de datos atípicos, se incluye características adicionales de los ítems y precios unitarios. En el gráfico de barras se muestran cuáles fueron los productos más vendidos por cada mes. Los totales son REACTIVOS COVID(30.1%), SERVICIO LABORATORIO(24.8%), MASCARILLAS KN95(18,4%), PRUEBAS PCR(11.5%), BOLSAS DE CADÁVER(10.9%) Y PRUEBAS RÁPIDAS(4.4%). Adicionalmente, se presenta un gráfico tipo velocímetro que muestran cuáles fueron los sobre precios estimados para cada uno de los productos, donde para identificar los montos mínimos y máximos; se realizó, la utilización de un formula basada en los rangos inter-quintiles entre 25% y 92%, para el tratamiento de datos atípico; sin embargo, los valores excluyentes en esta visualización pueden corresponder a montos que si fueron parte del esquema de fraude y sobre precios.
+												
+
+											</p>
+											
+										</div>																			
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body-mod">
+									<div class="d-flex align-items-center justify-content-between">
+										<h4 class="card-title-sm text-success font-weight-bold">REACTIVOS COVID</h4>
+										<span class="material-icons mdi-18px text-dark">science</span>
+									</div>
+									<div class=".product-order-wrap-redu padding-reduced">
+										<div id="productorder-gage-reac" class="gauge productorder-gage"></div>
+									</div>
+									<div class="text-center">
+										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">680%</b> de sobre precio.</p></h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body-mod">
+									<div class="d-flex align-items-center justify-content-between">
+										<h4 class="card-title-sm text-danger font-weight-bold">MASCARILLA KN95</h4>										
+										<span class="material-icons mdi-18px text-dark">masks</span>
+									</div>
+									<div class=".product-order-wrap-redu padding-reduced">
+										<div id="productorder-gage-mask" class="gauge productorder-gage"></div>
+									</div>
+									<div class="text-center">
+										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">520%</b> de sobre precio.</p></h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body-mod">
+									<div class="d-flex align-items-center justify-content-between">
+										<h4 class="card-title-sm text-warning font-weight-bold">BOLSAS CADÁVER</h4>
+										<span class="material-icons mdi-18px text-dark">person_off</span>
+									</div>
+									<div class=".product-order-wrap-redu padding-reduced">
+										<div id="productorder-gage-cad" class="gauge productorder-gage"></div>
+									</div>
+									<div class="text-center">
+										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">378%</b> de sobre precio.</p></h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body-mod">
+									<div class="d-flex align-items-center justify-content-between">
+										<h4 class="card-title-sm text-secondary font-weight-bold">LABORATORIO</h4>										
+										<span class="material-icons mdi-18px text-dark">biotech</span>
+									</div>
+									<div class=".product-order-wrap-redu padding-reduced">
+										<div id="productorder-gage-serlab" class="gauge productorder-gage"></div>
+									</div>
+									<div class="text-center">
+										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">292%</b> de sobre precio.</p></h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body-mod">
+									<div class="d-flex align-items-center justify-content-between">
+										<h4 class="card-title-sm text-info font-weight-bold">PRUEBAS RÁPIDAS</h4>										
+										<span class="material-icons mdi-18px text-dark">vaccines</span>
+									</div>
+									<div class=".product-order-wrap-redu padding-reduced ">
+										<div id="productorder-gage-prurap" class="gauge productorder-gage"></div>
+									</div>
+									<div class="text-center">
+										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">281%</b> de sobre precio.</p></h4>
+									</div>
+								</div>
+							</div>
+						</div>	
+						<div class="col-sm-2 grid-margin stretch-card">							
+							<div class="card">
+								<div class="card-body-mod">
+									<div class="d-flex align-items-center justify-content-between">
+										<h4 class="card-title-sm text-primary font-weight-bold">PRUEBAS PCR</h4>										
+										<span class="material-icons mdi-18px text-dark">coronavirus</span>
+									</div>											
+									<div class="product-order-wrap-redu padding-reduced">
+										<div id="productorder-gage-pcr" class="gauge productorder-gage"></div>
+									</div>
+									<div class="text-center">
+										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">190%</b> de sobre precio.</p></h4>
+									</div>
+								</div>
+							</div>
+						</div>											
+					</div>
+								
+					
+					
+					<div class="row">
+						<div class="col-sm-8 flex-column d-flex stretch-card">
+							<div class="row">
+								
+							</div>
+							<div class="row">
+								<div class="col-sm-12 grid-margin d-flex stretch-card">
+									<div class="card">
+										<div class="card-body">
+											
+												<div class="d-flex align-items-center justify-content-between">
+													<h4 class="text-dark font-weight-bold"><b>Representatividad entre empresas contratantes y productos por tipos de proveedores</b></h4>
+													<i class="mdi mdi-account-card-details	mdi-18px text-dark"></i>
+												</div>
+												
+											
+											<div>
+												<ul class="nav nav-tabs tab-no-active-fill" role="tablist">
+													<li class="nav-item">
+														<a class="nav-link active ps-2 pe-2" id="revenue-for-last-month-tab" data-bs-toggle="tab" href="#revenue-for-last-month" role="tab" aria-controls="revenue-for-last-month" aria-selected="true">Montos</a> 
+													</li>
+													<li class="nav-item">
+														<a class="nav-link ps-2 pe-2" id="server-loading-tab" data-bs-toggle="tab" href="#server-loading" role="tab" aria-controls="server-loading" aria-selected="false">Contratos</a>
+													</li>													
+												</ul>
+												<div class="tab-content tab-no-active-fill-tab-content">
+													<div class="tab-pane fade show active" id="revenue-for-last-month" role="tabpanel" aria-labelledby="revenue-for-last-month-tab">
+														<div class="d-lg-flex justify-content-between">
+															<p class="mb-4 text-justify">En esta sección se puede observar las relaciones entre empresas y productos, en donde aquellas burbujas con un radio mayor corresponden a puntos de interés respecto de los montos contratados por cada tipo de empresa. Los tipos de empresa son Compañía Limitada(CA. LTDA.), Persona Natural y Sociedad Anónima(SA.); según, lo reportado por la Contraloría los dos tipos de esquemas de fraude más típicos se basaron en el uso de personas naturales bajo el esquema de testaferros para la venta de productos y la organización de sociedades fantasma u sociedades tipificadas bajo esquemas de asociación ilícita, utilizadas para lavado de activos y fraude procesal. Para el tipo PERSONAS NATURALES, destacan MASCARILLAS KN95 vendidas a HOSPITALES, OTROS Y GOBIERNOS DESCENTRALIZADOS. Para las SOCIEDADES, las relaciones más representativas fueron entre los productos PRUEBAS PCR y REACTIVOS COVID vendidas a HOSPITALES Y OTROS. 
+
+															</p>
+															
+														</div>
+														<canvas id="bubble-mon-productos-empresas"></canvas>
+													</div>
+													<div class="tab-pane fade" id="server-loading" role="tabpanel" aria-labelledby="server-loading-tab">
+														<div class="d-flex justify-content-between">
+															<p class="mb-4">Respecto del número de contratos para el tipo PERSONAS NATURALES, destacan MASCARILLAS KN95 contratados por HOSPITALES, OTROS Y EMPRESAS PÚBLICAS. Para las SOCIEDADES, las relaciones más representativas fueron entre los productos REACTIVOS COVID contratados por HOSPITALES. Al analizar los dos gráficos se puede evidenciar que existe una concordancia tanto en montos como en contratos realizados por HOSPITALES, y en este caso tenernos varios ejemplos que se encuentran bajo investigación como son: Hospital Eugenio Espejo, Hospital Los Ceibos, Hospital General del Guasmo Sur, entre otros, que coinciden con lo reportado por el Observatorio de Derechos y Justica de Ecuador en el Reporte: “CORRUPCIÓN EN TIEMPOS DE COVID-19: LA OTRA PANDEMIA EN EL ECUADOR”. El factor de conversión es 60 en relación con los montos y número de contratos máximos.</p>
+															
+														</div>
+														<canvas id="bubble-nro-productos-empresas"></canvas>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 flex-column d-flex stretch-card">
+							<div class="row flex-grow">
+								<div class="col-sm-12 grid-margin stretch-card">
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+											<div class="d-flex align-items-center justify-content-between">
+													<h4 class="text-dark font-weight-bold"><b>Resumen totales</b></h4>
+													<i class="mdi mdi-camera-timer	mdi-18px text-dark"></i>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-12 mt-4 mt-lg-0">
+													<div class="bg-primary text-white px-4 py-4 card">
+														<div class="row">
+															<div class="col-sm-7 pl-lg-5">
+																<h2>$1'123.131</h2>
+																<p class="mb-0">Millones en Inversión</p>
+															</div>
+															<div class="col-sm-5 climate-info-border mt-lg-0 mt-2">
+																<h2>35</h2>
+																<p class="mb-0">Nro. Contratos</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row pt-3 mt-md-1">
+												<div class="col">
+													<div class="d-flex purchase-detail-legend align-items-center">
+														<div id="circleProgress1" class="p-2"></div>
+														<div>
+															<p class="font-weight-medium text-dark text-small">REACTIVOS COVID</p>
+															<h3 class="font-weight-bold text-dark  mb-0">30.10%</h3>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="d-flex purchase-detail-legend align-items-center">
+														<div id="circleProgress2" class="p-2"></div>
+														<div>
+															<p class="font-weight-medium text-dark text-small">HOSPITAL</p>
+															<h3 class="font-weight-bold text-dark  mb-0">31.80%</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12 grid-margin stretch-card">
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-sm-12">
+													
+														<div class="d-flex align-items-center justify-content-between">
+															<h4 class="text-dark font-weight-bold"><b>Evolución histórica montos por proveedor</b></h4>
+															<i class="mdi mdi-chart-line	mdi-18px text-dark"></i>
+														</div>
+													<canvas id="visitorsToday"></canvas>
+													<div class="d-flex justify-content-between">
+														<p class="mb-4 text-justify">En la evolución histórica por proveedor se puede ver la participación relevante por montos tanto entre PERSONAS NATURALES y SOCIEDADES ANÓNIMAS, para los primeros meses de pandemia.</p>
+														
+													</div>
+
+												</div>
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 flex-column d-flex stretch-card">
+							<div class="row">
+								
+							</div>
+							<div class="row">
+								<div class="col-sm-12 grid-margin d-flex stretch-card">
+									<div class="card">
+										<div class="card-body">
+											
+												<div class="d-flex align-items-center justify-content-between">
+													<h4 class="text-dark font-weight-bold"><b>Top empresas y proveedores</b></h4>
+													<span class="material-icons mdi-18px text-dark">store</span>
+												</div>
+												
+											
+											<div>
+												<ul class="nav nav-tabs tab-no-active-fill" role="tablist">
+													<li class="nav-item">
+														<a class="nav-link active ps-2 pe-2" id="revenue-for-last-month-tab2" data-bs-toggle="tab" href="#revenue-for-last-month2" role="tab" aria-controls="revenue-for-last-month" aria-selected="true">Empresas</a> 
+													</li>
+													<li class="nav-item">
+														<a class="nav-link ps-2 pe-2" id="server-loading-tab2" data-bs-toggle="tab" href="#server-loading2" role="tab" aria-controls="server-loading" aria-selected="false">Proveedores</a>
+													</li>													
+												</ul>
+												<div class="tab-content tab-no-active-fill-tab-content">
+													<div class="tab-pane fade show active" id="revenue-for-last-month2" role="tabpanel" aria-labelledby="revenue-for-last-month-tab">
+														<div class="d-lg-flex justify-content-between">
+															<p class="mb-4 text-justify">
+																Si se realiza el análisis tanto para montos y contratos, al desglosar las contrataciones para cada tipo de empresas públicas contratantes separadas por tipo de producto, identificamos a las empresas públicas que consiguieron la mayor participación con relación a las adquisiciones; estas ocupan un mayor espacio en la gráfica (mapa de árbol), por ejemplo: CORPORACIÓN ELECTRICA DEL ECUADOR CELEC EP, HOSPITAL PROVINCIAL GENERAL PABLO ARTURO SUAREZ, UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE, HOSPITAL PROVINCIAL GENERAL PABLO ARTURO SUAREZ Y UNIVERSIDAD NACIONAL DE LOJA.		 
+																</p>
+															
+														</div>														
+														<div id="support-tracker-legend" class="support-tracker-legend"></div>
+														<div id="controls">
+															<select id="data-key">
+																<option value="montos" selected>Montos</option>
+																<option value="contratos" >Contratos</option>																
+															</select>
+															<input type="checkbox" id="division" value="division" name="division" checked>
+															<label for="division">Producto</label>
+															<input type="checkbox" id="region" value="region" name="region" checked>
+															<label for="region">Empresa</label>															
+															<input type="checkbox" id="code" value="code" name="code" checked>
+															<label for="state">Código</label>
+															<input type="checkbox" id="rtl" value="rtl" name="rtl">
+															<label for="rtl">Rotar</label>
+														</div>
+														<div id="canvas-holder">
+															<canvas id="chart-area" width="800" height="400"></canvas>
+														</div>
+													</div>
+													<div class="tab-pane fade" id="server-loading2" role="tabpanel" aria-labelledby="server-loading-tab">
+														<div class="d-flex justify-content-between">
+															<p class="mb-4 text-justify">
+																Si se realiza el análisis tanto para montos y contratos, al desglosar las contrataciones para cada tipo de proveedores del estado separadas por tipo de producto, identificamos los proveedores que consiguieron la mayor participación con relación a las adquisiciones, estas ocupan un mayor espacio en la gráfica (mapa de árbol), por ejemplo: LAB QUALITY S.C.C., ROCHE ECUADOR S.A., MEDINA MOREJON FAUSTO JAVIER, Y SALDARRIAGA BRACAMONTE LEIDY HASHIEL.
+															</p>															
+														</div>
+														<div id="controls2">
+															<select id="data-key2">
+																<option value="montos" selected>Montos</option>
+																<option value="contratos" >Contratos</option>																
+															</select>
+															<input type="checkbox" id="division" value="division" name="division" checked>
+															<label for="division">Producto</label>
+															<input type="checkbox" id="region" value="region" name="region" checked>
+															<label for="region">Proveedor</label>															
+															<input type="checkbox" id="code" value="code" name="code" checked>
+															<label for="state">Código</label>
+															<input type="checkbox" id="rtl" value="rtl" name="rtl">
+															<label for="rtl">Rotar</label>
+														</div>
+														<div id="canvas-holder">
+															<canvas id="chart-area-pro" width="800" height="400"></canvas>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>	
+					<div class="row">
+						<div class="col-sm-12 flex-column d-flex stretch-card">							
+							<div class="row">
+								<div class="col-sm-12 grid-margin d-flex stretch-card">
+									<div class="card">
+										<div class="card-body">
+											
+												<div class="d-flex align-items-center justify-content-between">
+													<h4 class="text-dark font-weight-bold"><b>Conclusiones y recomendaciones</b></h4>
+													<span class="material-icons mdi-18px text-dark">emoji_objects</span>
+												</div>
+												<ul class="list-star">
+													<li><p class="text-uppercase text-dark"><b>Legado y herencia de datos</b></p>
+														<p class="text-justify">Mediante la publicación de datos abiertos, y siguiendo el enfoque de Gobierno Abierto, se crea un ecosistema participativo de innovación en donde toda la ciudadanía puede llegar a ser un actor fundamental para validar la información y generar ideas, proyectos, investigación o emprendimiento, principalmente enfocado al mejoramiento de los servicios públicos a nivel Nacional. Debido a procesos de actualización o migración de la plataforma se evidencia que varias de las estructuras relevantes de datos como son cantidad de productos y precios en las compras fueron eliminadas. Se recomienda establecer mecanismos de acceso a los repositorios de datos anteriores, para que sistemas o visualizaciones que hacían uso de los datos en los formatos anteriores pueden hacer uso de estos.</p>
+													</li>
+													<li><p class="text-uppercase text-dark"><b>Transparencia y acceso a la información</b></p>
+														<p class="text-justify">La información provista por la plataforma de datos abiertos ahora en formatos JSON, XML y EXCEL, debería incluir también aquellos contratos que por soluciones judiciales fueron considerados como nulos, con el fin de mejorar la transparencia en todos los procesos. Existen errores u omisiones en los propios documentos generados como reportes de las instituciones que generan esta información. Además, al no estar los datos en línea se produce un efecto de congelamiento de datos, cuya extracción posterior imposibilita mecanismos efectivos para combatir la corrupción. La idea es que toda información relevante de los contratos sea incluida en los campos adicionales definidos por el Open Contracting Data Standard.</p>
+													</li>
+													<li><p class="text-uppercase text-dark"><b>Relaciones entre las fuentes de información</b></p>
+														<p class="text-justify">Se evidencia que existe relaciones entre las personas de las empresas, marcas atípicas y relaciones entre empresas cuya visualización no se puede contar a través de historias, ya que las fuentes de datos están en diversos repositorios. Por ejemplo, los índices de precios de los productos desde la oferta no son comparables contra las ofertas realizadas en los contratos y; por ende muchas de las veces los precios en los contratos están por encima de los precios del mercado. Puede existir un historial de precios de los productos, y estos deben ser medibles. Se recomienda establecer catálogos de productos que permitan relacionar e identificar de manera clara y medible los productos y sus precios. Dar un valor agregado a los costos de los productos con referencia su calidad, confiabilidad y durabilidad. </p>
+													</li>													
+												  </ul>											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>	
+					<div class="row">
+						<div class="col-sm-12 flex-column d-flex stretch-card">							
+							<div class="row">
+								<div class="col-sm-12 grid-margin d-flex stretch-card">
+									<div class="card">
+										<div class="card-body">											
+												<div class="d-flex align-items-center justify-content-between">
+													<h4 class="text-dark font-weight-bold"><b>Bibliografía</b></h4>
+													<span class="material-icons mdi-18px text-dark">local_library</span>
+												</div>
+												<ul>
+													
+													<li>
+														<div class="formatted-preview__reference-wrapper">
+															<div class="formatted-preview__reference" style="margin-left: 36pt; text-indent: -36pt;">Otra, L., En, P., &amp; Ecuador, E. (2021). <i>CORRUPCIÓN EN TIEMPOS DE COVID-19: LA OTRA PANDEMIA EN EL ECUADOR</i>. https://odjec.org/wp-content/uploads/2021/04/Corrupcion-y-covid-19.pdf
+															</div>
+														</div>
+													</li>													
+													<li>
+														<div class="formatted-preview__reference-wrapper">
+															<div class="formatted-preview__reference" style="margin-left: 36pt; text-indent: -36pt;">SISTEMA OFICIAL DE CONTRATACION DEL ESTADO., &amp; (2021, November 29). <i>Listar Archivos JSON. Datosabiertos.compraspublicas.gob.ec.</i>. https://datosabiertos.compraspublicas.gob.ec/OCDS/
+															</div>
+														</div>									 														
+													</li>
+													<li>
+														<div class="formatted-preview__reference" style="margin-left: 36pt; text-indent: -36pt;">Contraloría General del Estado del Ecuador. (2021). <i>Portal Web Oficial de la Contraloría General del Estado del Ecuador</i>. Contraloria.gob.ec. https://www.contraloria.gob.ec/CentralMedios/SalaPrensa/23870
+														</div>
+													</li>
+													<li>
+														<div class="formatted-preview__reference" style="margin-left: 36pt; text-indent: -36pt;">EL COMERCIO. (2020, June 13). <i>Daniel Salcedo deberá responder por la venta de bolsas de cadáveres de $12 a $148</i>. El Universo. https://www.eluniverso.com/noticias/2020/06/13/nota/7870461/salcedo-debera-responder-venta-bolsas-cadaveres-12-148/</div>
+													</li>
+													<li>
+														<div class="formatted-preview__reference" style="margin-left: 36pt; text-indent: -36pt;">Servicio Nacional de Contratación Pública. (2020, August). <i>Sercop regula y controla las contrataciones por Emergencia – Servicio Nacional de Contratación Pública</i>. Servicio Nacional de Contratación Pública. https://portal.compraspublicas.gob.ec/sercop/sercop-regula-y-controla-las-contrataciones-por-emergencia/</div>
+													</li>
+													<li>
+														<div class="formatted-preview__reference" style="margin-left: 36pt; text-indent: -36pt;">SERCOP. (2021, December 29). <i>Datosabiertos</i>. Datosabiertos.compraspublicas.gob.ec. https://datosabiertos.compraspublicas.gob.ec/PLATAFORMA</div>
+													</li>											
+												  </ul>											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>					
+					
+				</div>
+				<!-- content-wrapper ends -->
+				<!-- partial:partials/_footer.html -->
+				<footer class="footer">
+          <div class="footer-wrap">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">              
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Licencia MIT, contacto <b>miguelalejoponce@uoc.edu</b><span class="material-icons mdi-18px text-dark">email</span></span>
+			  <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Plantilla<a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
+            </div>
+          </div>
+        </footer>
+				<!-- partial -->
+			</div>
+			<!-- main-panel ends -->
+		</div>
+		<!-- page-body-wrapper ends -->
+    </div>
+		<!-- container-scroller -->
+    <!-- base:js -->
+    <script src="vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+     <!--<script src="js/template.js"></script>-->
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <!-- End plugin js for this page -->
+	<!-- <script src="vendors/chart.js/Chart.min.js"></script>-->
+	<script src="./js/utils.js"></script>
+	<script src="./us_stats_by_state_min.js"></script>
+	<script src="./vendors/justgage/raphael-2.1.4.min.js"></script>
+	<script src="./vendors/justgage/justgage.js"></script>	
+	<script src="./char-js/script-chart-config.js"></script>
+	<script src="./char-js/script-chart-bar.js"></script>
+	<script src="./char-js/script-chart-line.js"></script>
+	<script src="./char-js/script-chart-buble.js"></script>
+	<script src="./char-js/script-chart-tree-map.js"></script>
+	
+    <script src="vendors/progressbar.js/progressbar.min.js"></script>
+		
+		<script src="vendors/justgage/raphael-2.1.4.min.js"></script>
+		<script src="vendors/justgage/justgage.js"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <!-- Custom js for this page-->
+    <script src="js/dashboard.js"></script>
+    <!-- End custom js for this page-->
+  </body>
+</html>
