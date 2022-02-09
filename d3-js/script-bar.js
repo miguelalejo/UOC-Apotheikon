@@ -25,7 +25,7 @@ var color = d3.scale.ordinal()
 
 
 
-d3.json("https://raw.githubusercontent.com/miguelalejo/UOC-A9-ProyectoVisualizacion/main/data/bar-productos-meses.json", function(error, data) {
+d3.json("https://raw.githubusercontent.com/miguelalejo/CodeSandboxD3Example/main/data/bar-lenguajes.json", function(error, data) {
 
   var svg = d3.select("#bar-1").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -54,7 +54,7 @@ d3.json("https://raw.githubusercontent.com/miguelalejo/UOC-A9-ProyectoVisualizac
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       .style('font-weight','bold')
-      .text("Inversión");
+      .text("Value");
 
   svg.select('.y').transition().duration(500).delay(1300).style('opacity','1');
 
@@ -141,7 +141,7 @@ d3.json("https://raw.githubusercontent.com/miguelalejo/CodeSandboxD3Example/main
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       .style('font-weight','bold')
-      .text("Inversión");
+      .text("Value");
 
   svg.select('.y').transition().duration(500).delay(1300).style('opacity','1');
 
