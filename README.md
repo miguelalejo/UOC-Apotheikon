@@ -83,58 +83,7 @@ Las cuestiones a responder con la visualización son:
 * ¿Cuáles son el top 10 de instituciones públicas las que realizaros mayores gastos en contratos con estos insumos?
 
 ## Justificación de la elección del juego de datos
-Los datos son actuales debido a que la ley obliga a realizar la publicación de todos los contrataros realizados de manera mensual en un formato Open Contracting (reporte en formato json), estándar internacional para el reportar información contractual relevante. La última fecha de actualización del conjunto de datos es 29 de diciembre de 2021.
 
-El dominio se describe por medio de los siguientes atributos:
-
-    Column                           Non-Null Count  Dtype                                 
----  ------                           --------------  -----                                 
- 0   ocid                             35 non-null     object                                
- 1   rationale                        35 non-null     object                                
- 2   budget_amount                    9 non-null      float64                               
- 3   release_id_x                     35 non-null     object                                
- 4   status_x                         35 non-null     object                                
- 5   contractPeriod_startDate_x       35 non-null     datetime64[ns, pytz.FixedOffset(-300)]
- 6   contractPeriod_endDate_x         35 non-null     object                                
- 7   contractPeriod_durationInDays_x  35 non-null     float64                               
- 8   dateSigned                       35 non-null     object                                
- 9   release_id_y                     35 non-null     object                                
- 10  description_x                    35 non-null     object                                
- 11  status_y                         35 non-null     object                                
- 12  procuringEntity_id               35 non-null     object                                
- 13  procuringEntity_name             35 non-null     object                                
- 14  value_amount                     9 non-null      float64                               
- 15  procurementMethodDetails         35 non-null     object                                
- 16  tenderPeriod_startDate           35 non-null     object                                
- 17  tenderPeriod_endDate             8 non-null      object                                
- 18  enquiryPeriod_durationInDays     28 non-null     float64                               
- 19  awardPeriod_startDate            26 non-null     object                                
- 20  awardPeriod_endDate              35 non-null     object                                
- 21  awardPeriod_durationInDays       24 non-null     float64                               
- 22  numberOfTenderers                35 non-null     float64                               
- 23  release_id_x                     35 non-null     object                                
- 24  title                            0 non-null      float64                               
- 25  description_y                    35 non-null     object                                
- 26  amount                           35 non-null     float64                               
- 27  contractPeriod_startDate_y       8 non-null      object                                
- 28  contractPeriod_endDate_y         8 non-null      object                                
- 29  contractPeriod_durationInDays_y  8 non-null      float64                               
- 30  release_id_y                     35 non-null     object                                
- 31  award_id                         35 non-null     object                                
- 32  id                               35 non-null     object                                
- 33  name                             35 non-null     object                                
- 34  codigo_empresa                   35 non-null     object                                
- 35  tipo_empresa                     35 non-null     object                                
- 36  codigo_proveedor                 35 non-null     object                                
- 37  tipo_provedor                    35 non-null     object                                
- 38  Producto                         35 non-null     object                                
- 39  month                            35 non-null     int64                                 
- 40  month_name                       35 non-null     object                                
- 41  mes_nombre                       35 non-null     object                                
-
-
-URL de datos abiertos(Licensed under the MIT):
-https://datosabiertos.compraspublicas.gob.ec/PLATAFORMA
 
 
 
