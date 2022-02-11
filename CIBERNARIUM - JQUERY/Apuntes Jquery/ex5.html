@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#mi_boton").click(function(){
+    $("#caja_verde").animate({
+      left: '250px',
+      opacity: '0.5',
+      height: '150px',
+      width: '150px'
+    });
+  });
+  
+});
+</script> 
+</head>
+<body>
+
+<button id="mi_boton">Start Animation</button>
+
+<div id="caja_verde" style="background:#98bf21;height:300px;width:300px;position:relative">Mi recuadro</div>
+
+</body>
+</html>
+<!--
+$("#mi_boton").click(function(){
+    $("#caja_verde").animate({
+      height: 'toggle'
+    });
+  });
+  
+$("#mi_boton").click(function(){
+	$("#caja_verde").animate({left: '100px'}, "slow");
+	$("#caja_verde").animate({fontSize: '3em'}, "slow");
+});
+-->
