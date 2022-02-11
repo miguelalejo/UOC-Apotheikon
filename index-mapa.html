@@ -19,8 +19,8 @@
     var path = d3.geoPath().projection(projection);
         
   // load data  
-var worldmap = d3.json("countries.geojson");
-var cities = d3.csv("cities.csv");
+var worldmap = d3.json("https://raw.githubusercontent.com/miguelalejo/UOC-Apotheikon/main/raw-data/countries.geojson");
+var cities = d3.csv("https://raw.githubusercontent.com/miguelalejo/UOC-Apotheikon/main/data/countries-spain.csv");
    
 Promise.all([worldmap, cities]).then(function(values){    
  // draw map
