@@ -20,7 +20,7 @@ URL contenedor web público:
 
 ## Créditos
 
-La actividad ha sido realizada de manera grupal por **Maite Piedra**, **Jordi Alba** y **Miguel Alejandro Ponce**.
+La actividad ha sido realizada de manera grupal por **Maite Piedra**, **Jordi Bosch* y **Miguel Alejandro Ponce**.
 
 ## Justificación
 Atida | Mifarma es el ecommerce líder en España y Portugal en la venta de productos de parafarmacia y farmacia. Con sede en Albacete y Madrid, más de 10 años de experiencia en el sector y un equipo de más de 120 profesionales, ofrece una experiencia confiable y personalizada antes, durante y después de todo el proceso de compra. La compañía ofrece un amplio catálogo de productos para el cuidado y bienestar a través de un servicio rápido y personalizado respaldado por expertos farmacéuticos.
