@@ -22,11 +22,11 @@ URL contenedor web público:
 La actividad ha sido realizada de manera grupal por **Maite Piedra**, **Jordi Bosch** y **Miguel Alejandro Ponce**.
 
 ## Justificación
-<p align="justify/left/right/center">
+<div align="center">
 Atida | Mifarma es el ecommerce líder en España y Portugal en la venta de productos de parafarmacia y farmacia. Con sede en Albacete y Madrid, más de 10 años de experiencia en el sector y un equipo de más de 120 profesionales, ofrece una experiencia confiable y personalizada antes, durante y después de todo el proceso de compra. La compañía ofrece un amplio catálogo de productos para el cuidado y bienestar a través de un servicio rápido y personalizado respaldado por expertos farmacéuticos.
 
 En el año 2019 Mifarma se unió a Atida con el objetivo de convertirse en la mayor plataforma de salud holística online en Europa. De este modo, trabajan día a día para construir un ecosistema online cuyo objetivo es transformar el panorama de salud y bienestar, convirtiéndose en la farmacia online más grande de Europa y un lugar de referencia al que acudir en busca de información y consejo profesional.
-</p>
+</div>
 
 ## El objetivo
 La comprensión del negocio es esencial para que las empresas puedan conseguir sus objetivos, así como para el desarrollo de sus planes de futuro. La visualización de datos es imprescindible para entender el negocio (clusterización de clientes, paquetización de productos, identificación de zonas de expansión, segmentación comportamental en ventas...).
