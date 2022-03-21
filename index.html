@@ -70,11 +70,11 @@
 									<div class="row">
 										<div class="col-lg-6">
 											<div class="d-flex align-items-center justify-content-between">
-												<h4 class="text-dark font-weight-bold"><b>Evolución histórica por montos</b></h4>
+												<h4 class="text-dark font-weight-bold"><b>Productos Relevantes</b></h4>
 												<i class="mdi mdi-currency-usd mdi-18px text-dark"></i>
 											</div>
 
-											<canvas id="line-chart-montos-contratos"></canvas>
+											<div class="flourish-embed flourish-hierarchy" data-src="visualisation/8856862"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 											
 											<p class="mt-3 mb-4 mb-lg-0 text-justify">En el año 2020, debido a la emergencia sanitaria, las compras públicas se multiplicaron. Hospitales, municipios, prefecturas, empresas, agencias, fundaciones, ministerios expresaron la necesidad de adquirir elementos que les permitan defender a la población del coronavirus. A continuación, se muestra la evolución histórica en montos y contratos por mes; para los meses de marzo y abril no se presenta información, 
 											</p>
@@ -83,10 +83,10 @@
 										<div class="col-lg-6">
 											
 											<div class="d-flex align-items-center justify-content-between">
-												<h4 class="text-dark font-weight-bold"><b>Evolución histórica por contratos</b></h4>
+												<h4 class="text-dark font-weight-bold"><b>Indices de precios</b></h4>
 												<i class="mdi mdi-numeric-4-box-multiple-outline mdi-18px text-dark"></i>
 											</div>
-											<canvas id="line-chart-nro-contratos"></canvas>
+											<div class="flourish-embed" data-src="visualisation/8879063"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 											
 											<p class="mt-3 mb-4 mb-lg-0 text-justify">pero se destaca que en los montos mayores fue de $147786 en mayo y $308565 en septiembre; sin embargo, para los meses de febrero, mayo y julio se registran apenas 7 contratos con un monto total de $378988 que representa 33,33% de todos los contratos y en estos meses es donde más exámenes especiales se ha realizado por parte de la Contraloría General del Estado.
 											</p>
@@ -108,7 +108,7 @@
 												<h4 class="text-dark font-weight-bold"><b>Evolución histórica por productos</b></h4>
 												<i class="mdi mdi-cart-outline	mdi-18px text-dark"></i>
 											</div>
-											<canvas id="bar-chart-productos-meses" width="150" height="50"></canvas>
+											<div class="flourish-embed flourish-chart" data-src="visualisation/8854451"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 											<p class="mt-3 mb-4 mb-lg-0 text-justify">Esta sección muestra un listado de los 6 artículos adquiridos para hacer frente a la emergencia de las entidades públicas. La información se encuentra representada de manera evolutiva durante el periodo 2020. La nueva plataforma de datos abiertos (open data) no brinda una descripción específica sobre la cantidad de productos por contrato que fueron adquiridos, detalle especifico o codificación de productos para realizar una mejor trazabilidad de las misma; luego, fue necesario realizar tratamiento basados en procesamiento del lenguaje natural(NLP), para identificar las categorías a las que pertenece cada producto descrito en los diferentes contratos. Adicionalmente se realizó cruces e integración de información con reportes emitidos en el portal del Sistema Oficial de Contratación Pública(SOCE), en el cual se detalla la información antes mencionada, en donde mediante limpieza de datos e identificación de datos atípicos, se incluye características adicionales de los ítems y precios unitarios. En el gráfico de barras se muestran cuáles fueron los productos más vendidos por cada mes. Los totales son REACTIVOS COVID(30.1%), SERVICIO LABORATORIO(24.8%), MASCARILLAS KN95(18,4%), PRUEBAS PCR(11.5%), BOLSAS DE CADÁVER(10.9%) Y PRUEBAS RÁPIDAS(4.4%). Adicionalmente, se presenta un gráfico tipo velocímetro que muestran cuáles fueron los sobre precios estimados para cada uno de los productos, donde para identificar los montos mínimos y máximos; se realizó, la utilización de un formula basada en los rangos inter-quintiles entre 25% y 92%, para el tratamiento de datos atípico; sin embargo, los valores excluyentes en esta visualización pueden corresponder a montos que si fueron parte del esquema de fraude y sobre precios.
 												
 
@@ -120,318 +120,32 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-sm-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body-mod">
-									<div class="d-flex align-items-center justify-content-between">
-										<h4 class="card-title-sm text-success font-weight-bold">REACTIVOS COVID</h4>
-										<span class="material-icons mdi-18px text-dark">science</span>
-									</div>
-									<div class=".product-order-wrap-redu padding-reduced">
-										<div id="productorder-gage-reac" class="gauge productorder-gage"></div>
-									</div>
-									<div class="text-center">
-										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">680%</b> de sobre precio.</p></h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body-mod">
-									<div class="d-flex align-items-center justify-content-between">
-										<h4 class="card-title-sm text-danger font-weight-bold">MASCARILLA KN95</h4>										
-										<span class="material-icons mdi-18px text-dark">masks</span>
-									</div>
-									<div class=".product-order-wrap-redu padding-reduced">
-										<div id="productorder-gage-mask" class="gauge productorder-gage"></div>
-									</div>
-									<div class="text-center">
-										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">520%</b> de sobre precio.</p></h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body-mod">
-									<div class="d-flex align-items-center justify-content-between">
-										<h4 class="card-title-sm text-warning font-weight-bold">BOLSAS CADÁVER</h4>
-										<span class="material-icons mdi-18px text-dark">person_off</span>
-									</div>
-									<div class=".product-order-wrap-redu padding-reduced">
-										<div id="productorder-gage-cad" class="gauge productorder-gage"></div>
-									</div>
-									<div class="text-center">
-										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">378%</b> de sobre precio.</p></h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body-mod">
-									<div class="d-flex align-items-center justify-content-between">
-										<h4 class="card-title-sm text-secondary font-weight-bold">LABORATORIO</h4>										
-										<span class="material-icons mdi-18px text-dark">biotech</span>
-									</div>
-									<div class=".product-order-wrap-redu padding-reduced">
-										<div id="productorder-gage-serlab" class="gauge productorder-gage"></div>
-									</div>
-									<div class="text-center">
-										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">292%</b> de sobre precio.</p></h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body-mod">
-									<div class="d-flex align-items-center justify-content-between">
-										<h4 class="card-title-sm text-info font-weight-bold">PRUEBAS RÁPIDAS</h4>										
-										<span class="material-icons mdi-18px text-dark">vaccines</span>
-									</div>
-									<div class=".product-order-wrap-redu padding-reduced ">
-										<div id="productorder-gage-prurap" class="gauge productorder-gage"></div>
-									</div>
-									<div class="text-center">
-										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">281%</b> de sobre precio.</p></h4>
-									</div>
-								</div>
-							</div>
-						</div>	
-						<div class="col-sm-2 grid-margin stretch-card">							
-							<div class="card">
-								<div class="card-body-mod">
-									<div class="d-flex align-items-center justify-content-between">
-										<h4 class="card-title-sm text-primary font-weight-bold">PRUEBAS PCR</h4>										
-										<span class="material-icons mdi-18px text-dark">coronavirus</span>
-									</div>											
-									<div class="product-order-wrap-redu padding-reduced">
-										<div id="productorder-gage-pcr" class="gauge productorder-gage"></div>
-									</div>
-									<div class="text-center">
-										<h4 class="tmb-0  line-chart-row-title-rel  font-weight-bold"><b class="text-danger">190%</b> de sobre precio.</p></h4>
-									</div>
-								</div>
-							</div>
-						</div>											
-					</div>
+					
 								
 					
 					
-					<div class="row">
-						<div class="col-sm-8 flex-column d-flex stretch-card">
-							<div class="row">
-								
-							</div>
-							<div class="row">
-								<div class="col-sm-12 grid-margin d-flex stretch-card">
-									<div class="card">
-										<div class="card-body">
-											
-												<div class="d-flex align-items-center justify-content-between">
-													<h4 class="text-dark font-weight-bold"><b>Representatividad entre empresas contratantes y productos por tipos de proveedores</b></h4>
-													<i class="mdi mdi-account-card-details	mdi-18px text-dark"></i>
-												</div>
-												
-											
-											<div>
-												<ul class="nav nav-tabs tab-no-active-fill" role="tablist">
-													<li class="nav-item">
-														<a class="nav-link active ps-2 pe-2" id="revenue-for-last-month-tab" data-bs-toggle="tab" href="#revenue-for-last-month" role="tab" aria-controls="revenue-for-last-month" aria-selected="true">Montos</a> 
-													</li>
-													<li class="nav-item">
-														<a class="nav-link ps-2 pe-2" id="server-loading-tab" data-bs-toggle="tab" href="#server-loading" role="tab" aria-controls="server-loading" aria-selected="false">Contratos</a>
-													</li>													
-												</ul>
-												<div class="tab-content tab-no-active-fill-tab-content">
-													<div class="tab-pane fade show active" id="revenue-for-last-month" role="tabpanel" aria-labelledby="revenue-for-last-month-tab">
-														<div class="d-lg-flex justify-content-between">
-															<p class="mb-4 text-justify">En esta sección se puede observar las relaciones entre empresas y productos, en donde aquellas burbujas con un radio mayor corresponden a puntos de interés respecto de los montos contratados por cada tipo de empresa. Los tipos de empresa son Compañía Limitada(CA. LTDA.), Persona Natural y Sociedad Anónima(SA.); según, lo reportado por la Contraloría los dos tipos de esquemas de fraude más típicos se basaron en el uso de personas naturales bajo el esquema de testaferros para la venta de productos y la organización de sociedades fantasma u sociedades tipificadas bajo esquemas de asociación ilícita, utilizadas para lavado de activos y fraude procesal. Para el tipo PERSONAS NATURALES, destacan MASCARILLAS KN95 vendidas a HOSPITALES, OTROS Y GOBIERNOS DESCENTRALIZADOS. Para las SOCIEDADES, las relaciones más representativas fueron entre los productos PRUEBAS PCR y REACTIVOS COVID vendidas a HOSPITALES Y OTROS. 
-
-															</p>
-															
-														</div>
-														<canvas id="bubble-mon-productos-empresas"></canvas>
-													</div>
-													<div class="tab-pane fade" id="server-loading" role="tabpanel" aria-labelledby="server-loading-tab">
-														<div class="d-flex justify-content-between">
-															<p class="mb-4">Respecto del número de contratos para el tipo PERSONAS NATURALES, destacan MASCARILLAS KN95 contratados por HOSPITALES, OTROS Y EMPRESAS PÚBLICAS. Para las SOCIEDADES, las relaciones más representativas fueron entre los productos REACTIVOS COVID contratados por HOSPITALES. Al analizar los dos gráficos se puede evidenciar que existe una concordancia tanto en montos como en contratos realizados por HOSPITALES, y en este caso tenernos varios ejemplos que se encuentran bajo investigación como son: Hospital Eugenio Espejo, Hospital Los Ceibos, Hospital General del Guasmo Sur, entre otros, que coinciden con lo reportado por el Observatorio de Derechos y Justica de Ecuador en el Reporte: “CORRUPCIÓN EN TIEMPOS DE COVID-19: LA OTRA PANDEMIA EN EL ECUADOR”. El factor de conversión es 60 en relación con los montos y número de contratos máximos.</p>
-															
-														</div>
-														<canvas id="bubble-nro-productos-empresas"></canvas>
-													</div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4 flex-column d-flex stretch-card">
-							<div class="row flex-grow">
-								<div class="col-sm-12 grid-margin stretch-card">
-									<div class="card">
-										<div class="card-body">
-											<div class="row">
+					
+					<div class="row mt-4">
+						<div class="col-lg-12 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-lg-12">
 											<div class="d-flex align-items-center justify-content-between">
-													<h4 class="text-dark font-weight-bold"><b>Resumen totales</b></h4>
-													<i class="mdi mdi-camera-timer	mdi-18px text-dark"></i>
-												</div>
+												<h4 class="text-dark font-weight-bold"><b>Mapa de calor ventas</b></h4>
+												<i class="mdi mdi-cart-outline	mdi-18px text-dark"></i>
 											</div>
-											<div class="row">
-												<div class="col-sm-12 mt-4 mt-lg-0">
-													<div class="bg-primary text-white px-4 py-4 card">
-														<div class="row">
-															<div class="col-sm-7 pl-lg-5">
-																<h2>$1'123.131</h2>
-																<p class="mb-0">Millones en Inversión</p>
-															</div>
-															<div class="col-sm-5 climate-info-border mt-lg-0 mt-2">
-																<h2>35</h2>
-																<p class="mb-0">Nro. Contratos</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="row pt-3 mt-md-1">
-												<div class="col">
-													<div class="d-flex purchase-detail-legend align-items-center">
-														<div id="circleProgress1" class="p-2"></div>
-														<div>
-															<p class="font-weight-medium text-dark text-small">REACTIVOS COVID</p>
-															<h3 class="font-weight-bold text-dark  mb-0">30.10%</h3>
-														</div>
-													</div>
-												</div>
-												<div class="col">
-													<div class="d-flex purchase-detail-legend align-items-center">
-														<div id="circleProgress2" class="p-2"></div>
-														<div>
-															<p class="font-weight-medium text-dark text-small">HOSPITAL</p>
-															<h3 class="font-weight-bold text-dark  mb-0">31.80%</h3>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-12 grid-margin stretch-card">
-									<div class="card">
-										<div class="card-body">
-											<div class="row">
-												<div class="col-sm-12">
-													
-														<div class="d-flex align-items-center justify-content-between">
-															<h4 class="text-dark font-weight-bold"><b>Evolución histórica montos por proveedor</b></h4>
-															<i class="mdi mdi-chart-line	mdi-18px text-dark"></i>
-														</div>
-													<canvas id="visitorsToday"></canvas>
-													<div class="d-flex justify-content-between">
-														<p class="mb-4 text-justify">En la evolución histórica por proveedor se puede ver la participación relevante por montos tanto entre PERSONAS NATURALES y SOCIEDADES ANÓNIMAS, para los primeros meses de pandemia.</p>
-														
-													</div>
+											<div class="flourish-embed flourish-map" data-src="visualisation/8934780"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+											<p class="mt-3 mb-4 mb-lg-0 text-justify">Esta sección muestra un listado de los 6 artículos adquiridos para hacer frente a la emergencia de las entidades públicas. La información se encuentra representada de manera evolutiva durante el periodo 2020. La nueva plataforma de datos abiertos (open data) no brinda una descripción específica sobre la cantidad de productos por contrato que fueron adquiridos, detalle especifico o codificación de productos para realizar una mejor trazabilidad de las misma; luego, fue necesario realizar tratamiento basados en procesamiento del lenguaje natural(NLP), para identificar las categorías a las que pertenece cada producto descrito en los diferentes contratos. Adicionalmente se realizó cruces e integración de información con reportes emitidos en el portal del Sistema Oficial de Contratación Pública(SOCE), en el cual se detalla la información antes mencionada, en donde mediante limpieza de datos e identificación de datos atípicos, se incluye características adicionales de los ítems y precios unitarios. En el gráfico de barras se muestran cuáles fueron los productos más vendidos por cada mes. Los totales son REACTIVOS COVID(30.1%), SERVICIO LABORATORIO(24.8%), MASCARILLAS KN95(18,4%), PRUEBAS PCR(11.5%), BOLSAS DE CADÁVER(10.9%) Y PRUEBAS RÁPIDAS(4.4%). Adicionalmente, se presenta un gráfico tipo velocímetro que muestran cuáles fueron los sobre precios estimados para cada uno de los productos, donde para identificar los montos mínimos y máximos; se realizó, la utilización de un formula basada en los rangos inter-quintiles entre 25% y 92%, para el tratamiento de datos atípico; sin embargo, los valores excluyentes en esta visualización pueden corresponder a montos que si fueron parte del esquema de fraude y sobre precios.
+												
 
-												</div>
-											</div>
+											</p>
 											
-											
-										</div>
+										</div>																			
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 flex-column d-flex stretch-card">
-							<div class="row">
-								
-							</div>
-							<div class="row">
-								<div class="col-sm-12 grid-margin d-flex stretch-card">
-									<div class="card">
-										<div class="card-body">
-											
-												<div class="d-flex align-items-center justify-content-between">
-													<h4 class="text-dark font-weight-bold"><b>Top empresas y proveedores</b></h4>
-													<span class="material-icons mdi-18px text-dark">store</span>
-												</div>
-												
-											
-											<div>
-												<ul class="nav nav-tabs tab-no-active-fill" role="tablist">
-													<li class="nav-item">
-														<a class="nav-link active ps-2 pe-2" id="revenue-for-last-month-tab2" data-bs-toggle="tab" href="#revenue-for-last-month2" role="tab" aria-controls="revenue-for-last-month" aria-selected="true">Empresas</a> 
-													</li>
-													<li class="nav-item">
-														<a class="nav-link ps-2 pe-2" id="server-loading-tab2" data-bs-toggle="tab" href="#server-loading2" role="tab" aria-controls="server-loading" aria-selected="false">Proveedores</a>
-													</li>													
-												</ul>
-												<div class="tab-content tab-no-active-fill-tab-content">
-													<div class="tab-pane fade show active" id="revenue-for-last-month2" role="tabpanel" aria-labelledby="revenue-for-last-month-tab">
-														<div class="d-lg-flex justify-content-between">
-															<p class="mb-4 text-justify">
-																Si se realiza el análisis tanto para montos y contratos, al desglosar las contrataciones para cada tipo de empresas públicas contratantes separadas por tipo de producto, identificamos a las empresas públicas que consiguieron la mayor participación con relación a las adquisiciones; estas ocupan un mayor espacio en la gráfica (mapa de árbol), por ejemplo: CORPORACIÓN ELECTRICA DEL ECUADOR CELEC EP, HOSPITAL PROVINCIAL GENERAL PABLO ARTURO SUAREZ, UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE, HOSPITAL PROVINCIAL GENERAL PABLO ARTURO SUAREZ Y UNIVERSIDAD NACIONAL DE LOJA.		 
-																</p>
-															
-														</div>														
-														<div id="support-tracker-legend" class="support-tracker-legend"></div>
-														<div id="controls">
-															<select id="data-key">
-																<option value="montos" selected>Montos</option>
-																<option value="contratos" >Contratos</option>																
-															</select>
-															<input type="checkbox" id="division" value="division" name="division" checked>
-															<label for="division">Producto</label>
-															<input type="checkbox" id="region" value="region" name="region" checked>
-															<label for="region">Empresa</label>															
-															<input type="checkbox" id="code" value="code" name="code" checked>
-															<label for="state">Código</label>
-															<input type="checkbox" id="rtl" value="rtl" name="rtl">
-															<label for="rtl">Rotar</label>
-														</div>
-														<div id="canvas-holder">
-															<canvas id="chart-area" width="800" height="400"></canvas>
-														</div>
-													</div>
-													<div class="tab-pane fade" id="server-loading2" role="tabpanel" aria-labelledby="server-loading-tab">
-														<div class="d-flex justify-content-between">
-															<p class="mb-4 text-justify">
-																Si se realiza el análisis tanto para montos y contratos, al desglosar las contrataciones para cada tipo de proveedores del estado separadas por tipo de producto, identificamos los proveedores que consiguieron la mayor participación con relación a las adquisiciones, estas ocupan un mayor espacio en la gráfica (mapa de árbol), por ejemplo: LAB QUALITY S.C.C., ROCHE ECUADOR S.A., MEDINA MOREJON FAUSTO JAVIER, Y SALDARRIAGA BRACAMONTE LEIDY HASHIEL.
-															</p>															
-														</div>
-														<div id="controls2">
-															<select id="data-key2">
-																<option value="montos" selected>Montos</option>
-																<option value="contratos" >Contratos</option>																
-															</select>
-															<input type="checkbox" id="division" value="division" name="division" checked>
-															<label for="division">Producto</label>
-															<input type="checkbox" id="region" value="region" name="region" checked>
-															<label for="region">Proveedor</label>															
-															<input type="checkbox" id="code" value="code" name="code" checked>
-															<label for="state">Código</label>
-															<input type="checkbox" id="rtl" value="rtl" name="rtl">
-															<label for="rtl">Rotar</label>
-														</div>
-														<div id="canvas-holder">
-															<canvas id="chart-area-pro" width="800" height="400"></canvas>
-														</div>
-													</div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>						
 					</div>	
 					<div class="row">
 						<div class="col-sm-12 flex-column d-flex stretch-card">							
